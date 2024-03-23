@@ -1,4 +1,4 @@
-resource "aws_db_instance" "rds" {
+resource "aws_db_instance" "sistema-pedidos_rds" {
   identifier             = var.db_name
   allocated_storage      = 20
   engine                 = "mysql"
@@ -7,4 +7,5 @@ resource "aws_db_instance" "rds" {
   username               = var.db_username
   password               = var.db_password
   publicly_accessible    = false
+  skip_final_snapshot    = true
 }
